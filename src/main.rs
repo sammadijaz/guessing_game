@@ -1,15 +1,16 @@
-use std::io;
+use std::io::{self, Write};
 
 fn main() {
-    print!("Guess the Number!");
+    println!("Guess the Number!");
 
     print!("Please input your guess: ");
+    io::stdout().flush().expect("Failed to flush stdout");
 
     let mut guess = String::new();
 
     io::stdin()
         .read_line(&mut guess)
         .expect("Failed to read the line");
-    
-    print!("You guessed: {guess}");
+
+    println!("You guessed: {guess}");
 }
