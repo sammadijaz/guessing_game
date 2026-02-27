@@ -1,7 +1,13 @@
 use std::io::{self, Write};
 
+use rand::Rng;
+
 fn main() {
     println!("Guess the Number!");
+
+    let secret_number = rand::thread_rng().gen_range(1..=100);
+
+    print!("The secret number is {secret_number}");
 
     print!("Please input your guess: ");
     io::stdout().flush().expect("Failed to flush stdout");
