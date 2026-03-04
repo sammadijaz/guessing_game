@@ -27,7 +27,7 @@ fn main() {
             Ordering::Less => print!("Too small!"),
             Ordering::Greater => print!("Too big!"),
             Ordering::Equal => {
-                print!("Wohooo!! You guess it right! You win!!");
+                print!("Wohooo!! You guessed it right! You win!!");
                 break;
             },
         }
